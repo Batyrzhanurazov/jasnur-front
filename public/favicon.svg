@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="ZhasNur">
+  <defs>
+    <clipPath id="disc"><circle cx="100" cy="100" r="59"/></clipPath>
+  </defs>
+  <rect x="34" y="34" width="132" height="132" fill="#409CA8"/>
+  <path d="M100 4 196 100 100 196 4 100Z" fill="#FFF351" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="miter"/>
+  <circle cx="100" cy="100" r="74" fill="#FFF351"/>
+  <circle cx="100" cy="100" r="69" fill="#FFFFFF"/>
+  <circle cx="100" cy="100" r="63" fill="#FFF351"/>
+  <circle cx="100" cy="100" r="59" fill="#409CA8"/>
+  <g clip-path="url(#disc)" fill="none" stroke="#FFF351" stroke-width="4">
+    <circle cx="25" cy="180" r="121"/>
+    <circle cx="25" cy="180" r="110"/>
+    <circle cx="175" cy="180" r="121"/>
+    <circle cx="175" cy="180" r="110"/>
+  </g>
+</svg>
