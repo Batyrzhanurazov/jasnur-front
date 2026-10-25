@@ -1,0 +1,25 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: root
+          key: ${{ secrets.VPS_KEY }}
+          script: |
+            cd /app/jasnur-front
+            git config --global --add safe.directory '*' || true
+            git fetch origin main
+            git reset --hard origin/main
+            docker build -t jasnur-front .
+            docker stop jasnur-front || true
+            docker rm jasnur-front || true
+            docker run -d --name jasnur-front --restart unless-stopped -p 127.0.0.1:8081:80 jasnur-front
