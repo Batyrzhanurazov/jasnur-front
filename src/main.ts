@@ -20,6 +20,7 @@ if (typeof window !== 'undefined') {
   const { initTheme } = useTheme()
   initAccessibility()
   initTheme()
+  console.info('[ZhasNur] App running (deploy test OK)')
 }
 
 app.mount('#app')
