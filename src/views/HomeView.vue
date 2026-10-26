@@ -134,149 +134,7 @@ const implementedProjects = computed(() => {
       </div>
     </section>
 
-    <!-- 3. Three Key Directions (Cards) -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">{{ $t('common.projectTitle') }}</span>
-          <h2>{{ $t('home.directionsTitle') }}</h2>
-          <p class="section-subtitle">
-            {{ $t('home.directionsSubtitle') }}
-          </p>
-        </div>
 
-        <div class="grid-3">
-          <!-- Card 1: Dispatcher -->
-          <div class="card direction-card">
-            <div class="direction-card__icon direction-card__icon--primary">
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                width="32"
-                height="32"
-                aria-hidden="true"
-              >
-                <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z" />
-              </svg>
-            </div>
-            <h3>{{ $t('home.dirDispatcher') }}</h3>
-            <p>{{ $t('home.dirDispatcherDesc') }}</p>
-            <router-link
-              :to="`/${currentLocale}/dispatcher`"
-              class="card-link"
-            >
-              {{ $t('common.readMore') }} →
-            </router-link>
-          </div>
-
-          <!-- Card 2: Leisure Club -->
-          <div class="card direction-card">
-            <div class="direction-card__icon direction-card__icon--secondary">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                width="32"
-                height="32"
-                aria-hidden="true"
-              >
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle
-                  cx="9"
-                  cy="7"
-                  r="4"
-                />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-            </div>
-            <h3>{{ $t('home.dirClub') }}</h3>
-            <p>{{ $t('home.dirClubDesc') }}</p>
-            <router-link
-              :to="`/${currentLocale}/club`"
-              class="card-link"
-            >
-              {{ $t('common.readMore') }} →
-            </router-link>
-          </div>
-
-          <!-- Card 3: Video Studio -->
-          <div class="card direction-card">
-            <div class="direction-card__icon direction-card__icon--accent">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                width="32"
-                height="32"
-                aria-hidden="true"
-              >
-                <rect
-                  x="2"
-                  y="2"
-                  width="20"
-                  height="20"
-                  rx="2.18"
-                  ry="2.18"
-                />
-                <line
-                  x1="7"
-                  y1="2"
-                  x2="7"
-                  y2="22"
-                />
-                <line
-                  x1="17"
-                  y1="2"
-                  x2="17"
-                  y2="22"
-                />
-                <line
-                  x1="2"
-                  y1="12"
-                  x2="22"
-                  y2="12"
-                />
-                <line
-                  x1="2"
-                  y1="7"
-                  x2="7"
-                  y2="7"
-                />
-                <line
-                  x1="2"
-                  y1="17"
-                  x2="7"
-                  y2="17"
-                />
-                <line
-                  x1="17"
-                  y1="17"
-                  x2="22"
-                  y2="17"
-                />
-                <line
-                  x1="17"
-                  y1="7"
-                  x2="22"
-                  y2="7"
-                />
-              </svg>
-            </div>
-            <h3>{{ $t('home.dirStudio') }}</h3>
-            <p>{{ $t('home.dirStudioDesc') }}</p>
-            <router-link
-              :to="`/${currentLocale}/studio`"
-              class="card-link"
-            >
-              {{ $t('common.readMore') }} →
-            </router-link>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- 4. How It Works (4 Steps) -->
     <section class="section section--dark">
@@ -418,47 +276,7 @@ const implementedProjects = computed(() => {
       </div>
     </section>
 
-    <!-- 7. Partners Block -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">{{ $t('home.partnersTitle') }}</span>
-          <h2>{{ $t('home.partnersTitle') }}</h2>
-          <p class="section-subtitle">
-            {{ $t('home.partnersSubtitle') }}
-          </p>
-        </div>
 
-        <div class="grid-3 partners-grid">
-          <!-- Kaspi -->
-          <div class="card partner-card">
-            <div class="partner-card__logo-placeholder">
-              <span>Kaspi.kz</span>
-            </div>
-            <h4>{{ $t('home.partnerKaspi') }}</h4>
-            <p>{{ $t('home.partnerKaspiDesc') }}</p>
-          </div>
-
-          <!-- Agip -->
-          <div class="card partner-card">
-            <div class="partner-card__logo-placeholder">
-              <span>Agip Karachaganak</span>
-            </div>
-            <h4>{{ $t('home.partnerAgip') }}</h4>
-            <p>{{ $t('home.partnerAgipDesc') }}</p>
-          </div>
-
-          <!-- Turkmenistan -->
-          <div class="card partner-card">
-            <div class="partner-card__logo-placeholder">
-              <span>Түркіменстан (2023–2024)</span>
-            </div>
-            <h4>{{ $t('home.partnerTurkmenistan') }}</h4>
-            <p>{{ $t('home.partnerTurkmenistanDesc') }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- 8. Regional Statistics Preview Banner -->
     <section class="section section--alt stats-banner-section">
@@ -626,36 +444,7 @@ const implementedProjects = computed(() => {
   }
 }
 
-/* Direction cards */
-.direction-card {
-  display: flex;
-  flex-direction: column;
-}
 
-.direction-card__icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.direction-card__icon--primary {
-  background: rgba(27, 79, 148, 0.12);
-  color: var(--color-primary, #1B4F94);
-}
-
-.direction-card__icon--secondary {
-  background: rgba(64, 156, 168, 0.15);
-  color: var(--color-secondary, #409CA8);
-}
-
-.direction-card__icon--accent {
-  background: rgba(255, 243, 81, 0.3);
-  color: var(--color-primary-dark, #1D3159);
-}
 
 .card-link {
   margin-top: auto;
@@ -776,27 +565,7 @@ const implementedProjects = computed(() => {
   flex-grow: 1;
 }
 
-/* Partners */
-.partner-card {
-  text-align: center;
-  align-items: center;
-}
 
-.partner-card__logo-placeholder {
-  width: 100%;
-  height: 90px;
-  background: var(--color-surface-alt, #EDF3FA);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Montserrat Variable', sans-serif;
-  font-weight: 800;
-  font-size: 1.15rem;
-  color: var(--color-primary, #1B4F94);
-  margin-bottom: 1.25rem;
-  border: 2px dashed var(--color-border, #E2E8F0);
-}
 
 /* Stats banner */
 .stats-banner {

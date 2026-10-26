@@ -30,13 +30,11 @@ const routes: RouteRecordRaw[] = [
       },
       {
         path: 'club',
-        name: 'club',
-        component: () => import('@/views/ClubView.vue')
+        redirect: (to) => `/${to.params.locale || 'ru'}`
       },
       {
         path: 'studio',
-        name: 'studio',
-        component: () => import('@/views/StudioView.vue')
+        redirect: (to) => `/${to.params.locale || 'ru'}`
       },
       {
         path: 'projects',
@@ -50,13 +48,11 @@ const routes: RouteRecordRaw[] = [
       },
       {
         path: 'news',
-        name: 'news',
-        component: () => import('@/views/NewsView.vue')
+        redirect: (to) => `/${to.params.locale || 'ru'}`
       },
       {
         path: 'news/:id',
-        name: 'news-detail',
-        component: () => import('@/views/NewsDetailView.vue')
+        redirect: (to) => `/${to.params.locale || 'ru'}`
       },
       {
         path: 'contacts',

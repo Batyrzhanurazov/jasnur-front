@@ -89,26 +89,13 @@ const currentLocale = computed<AppLocale>(() => {
                 {{ $t('nav.dispatcher') }}
               </router-link>
             </li>
-            <li>
-              <router-link :to="`/${currentLocale}/club`">
-                {{ $t('nav.club') }}
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="`/${currentLocale}/studio`">
-                {{ $t('nav.studio') }}
-              </router-link>
-            </li>
+
             <li>
               <router-link :to="`/${currentLocale}/projects`">
                 {{ $t('nav.projects') }}
               </router-link>
             </li>
-            <li>
-              <router-link :to="`/${currentLocale}/news`">
-                {{ $t('nav.news') }}
-              </router-link>
-            </li>
+
             <li>
               <router-link :to="`/${currentLocale}/contacts`">
                 {{ $t('nav.contacts') }}

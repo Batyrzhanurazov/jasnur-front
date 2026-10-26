@@ -98,22 +98,7 @@ function closeMenu() {
               {{ $t('nav.dispatcher') }}
             </router-link>
           </li>
-          <li>
-            <router-link
-              :to="`/${currentLocale}/club`"
-              active-class="active"
-            >
-              {{ $t('nav.club') }}
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              :to="`/${currentLocale}/studio`"
-              active-class="active"
-            >
-              {{ $t('nav.studio') }}
-            </router-link>
-          </li>
+
           <li>
             <router-link
               :to="`/${currentLocale}/projects`"
@@ -122,14 +107,7 @@ function closeMenu() {
               {{ $t('nav.projects') }}
             </router-link>
           </li>
-          <li>
-            <router-link
-              :to="`/${currentLocale}/news`"
-              active-class="active"
-            >
-              {{ $t('nav.news') }}
-            </router-link>
-          </li>
+
           <li>
             <router-link
               :to="`/${currentLocale}/contacts`"
@@ -260,24 +238,7 @@ function closeMenu() {
                 {{ $t('nav.dispatcher') }}
               </router-link>
             </li>
-            <li>
-              <router-link
-                :to="`/${currentLocale}/club`"
-                active-class="active"
-                @click="closeMenu"
-              >
-                {{ $t('nav.club') }}
-              </router-link>
-            </li>
-            <li>
-              <router-link
-                :to="`/${currentLocale}/studio`"
-                active-class="active"
-                @click="closeMenu"
-              >
-                {{ $t('nav.studio') }}
-              </router-link>
-            </li>
+
             <li>
               <router-link
                 :to="`/${currentLocale}/projects`"
@@ -287,15 +248,7 @@ function closeMenu() {
                 {{ $t('nav.projects') }}
               </router-link>
             </li>
-            <li>
-              <router-link
-                :to="`/${currentLocale}/news`"
-                active-class="active"
-                @click="closeMenu"
-              >
-                {{ $t('nav.news') }}
-              </router-link>
-            </li>
+
             <li>
               <router-link
                 :to="`/${currentLocale}/contacts`"
