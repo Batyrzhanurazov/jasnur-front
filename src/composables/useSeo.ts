@@ -13,7 +13,7 @@ export function useSeo(options?: () => SeoOptions) {
   const route = useRoute()
   const { locale, t } = useI18n()
 
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://zhasnur.kz'
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://deafzhasnur.kz'
 
   watchEffect(() => {
     if (typeof document === 'undefined') return
