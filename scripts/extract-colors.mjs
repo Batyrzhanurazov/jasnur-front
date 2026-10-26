@@ -148,9 +148,6 @@ VITE_CONTACT_URL=https://wa.me/77759711546
 # Плавающая кнопка «Видеозвонок»
 VITE_VIDEO_CALL_URL=https://wa.me/77759711546
 
-# ─── Мобильное приложение (TODO: ссылки отсутствуют в презентации) ───
-VITE_APP_STORE_URL=
-VITE_GOOGLE_PLAY_URL=
 
 # ─── Формы (TODO: бэкенд отсутствует; пусто = демо-режим без отправки) ───
 VITE_FORM_ENDPOINT=

@@ -14,8 +14,6 @@ interface ImportMetaEnv {
   readonly VITE_COLOR_SUCCESS: string
   readonly VITE_CONTACT_URL: string
   readonly VITE_VIDEO_CALL_URL: string
-  readonly VITE_APP_STORE_URL: string
-  readonly VITE_GOOGLE_PLAY_URL: string
   readonly VITE_FORM_ENDPOINT: string
 }
 

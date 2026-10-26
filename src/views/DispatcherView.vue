@@ -13,8 +13,6 @@ useSeo(() => ({
 
 const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/77759711546'
 const videoCallUrl = import.meta.env.VITE_VIDEO_CALL_URL || 'https://wa.me/77759711546'
-const appStoreUrl = import.meta.env.VITE_APP_STORE_URL || ''
-const googlePlayUrl = import.meta.env.VITE_GOOGLE_PLAY_URL || ''
 
 const faqItems = computed<AccordionItem[]>(() => [
   { id: 'faq-1', title: t('dispatcher.q1'), content: t('dispatcher.a1') },
@@ -106,7 +104,7 @@ const faqItems = computed<AccordionItem[]>(() => [
             <p>{{ $t('dispatcher.feature1Desc') }}</p>
           </div>
 
-          <!-- 2: App Video Calls -->
+          <!-- 2: WhatsApp Video Calls -->
           <div class="card service-feature">
             <div class="service-feature__icon">
               <svg
@@ -213,80 +211,6 @@ const faqItems = computed<AccordionItem[]>(() => [
       </div>
     </section>
 
-    <!-- App Download Section (with TODO notices) -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="app-download-card">
-          <div class="app-download__content">
-            <span class="section-tag">Mobile App</span>
-            <h2>{{ $t('dispatcher.appsTitle') }}</h2>
-            <p>{{ $t('dispatcher.appsNotice') }}</p>
-
-            <div class="app-buttons">
-              <!-- App Store Button -->
-              <a
-                :href="appStoreUrl || '#'"
-                class="btn-store"
-                :class="{ disabled: !appStoreUrl }"
-                :aria-disabled="!appStoreUrl"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  width="26"
-                  height="26"
-                >
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.99.6-2.64 1.35-.58.67-1.09 1.74-.95 2.77.99.08 2.05-.52 2.67-1.27z" />
-                </svg>
-                <div class="store-text">
-                  <small>Загрузите в</small>
-                  <strong>App Store</strong>
-                  <span
-                    v-if="!appStoreUrl"
-                    class="badge-todo"
-                  >(TODO)</span>
-                </div>
-              </a>
-
-              <!-- Google Play Button -->
-              <a
-                :href="googlePlayUrl || '#'"
-                class="btn-store"
-                :class="{ disabled: !googlePlayUrl }"
-                :aria-disabled="!googlePlayUrl"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  width="26"
-                  height="26"
-                >
-                  <path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5.3 0 .58.09.82.26l14.28 8.5c.57.34.9.96.9 1.64s-.33 1.3-.9 1.64L5.32 21.74c-.24.17-.52.26-.82.26-.83 0-1.5-.67-1.5-1.5z" />
-                </svg>
-                <div class="store-text">
-                  <small>Доступно в</small>
-                  <strong>Google Play</strong>
-                  <span
-                    v-if="!googlePlayUrl"
-                    class="badge-todo"
-                  >(TODO)</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="app-download__mockup">
-            <img
-              src="/assets/photos/operator-signing-480.webp"
-              alt="Сурдопереводчик в эфире"
-              width="320"
-              height="320"
-              class="app-img"
-            >
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- FAQ Accordion -->
     <section class="section">
@@ -407,88 +331,4 @@ const faqItems = computed<AccordionItem[]>(() => [
   font-size: 0.95rem;
 }
 
-/* App Download */
-.app-download-card {
-  background: var(--color-surface, #FFFFFF);
-  border: 2px solid var(--color-secondary, #409CA8);
-  border-radius: 24px;
-  padding: clamp(2rem, 4vw, 3.5rem);
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: center;
-  gap: 3rem;
-}
-
-@media (max-width: 860px) {
-  .app-download-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-}
-
-.app-buttons {
-  display: flex;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-  margin-top: 1.75rem;
-}
-@media (max-width: 860px) {
-  .app-buttons {
-    justify-content: center;
-  }
-}
-
-.btn-store {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: var(--color-primary-dark, #1D3159);
-  color: #FFFFFF !important;
-  padding: 0.75rem 1.5rem;
-  border-radius: 14px;
-  text-decoration: none !important;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.btn-store:hover:not(.disabled) {
-  background: var(--color-primary, #1B4F94);
-  transform: translateY(-2px);
-}
-
-.btn-store.disabled {
-  opacity: 0.75;
-  cursor: not-allowed;
-}
-
-.store-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-  text-align: left;
-}
-
-.store-text small {
-  font-size: 0.7rem;
-  color: var(--color-section-dark-muted, #B8CAE6);
-}
-
-.badge-todo {
-  font-size: 0.65rem;
-  color: var(--color-accent, #FFF351);
-  font-weight: 700;
-}
-
-.app-download__mockup {
-  display: flex;
-  justify-content: center;
-}
-
-.app-img {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 20px;
-  border: 4px solid var(--color-accent, #FFF351);
-  box-shadow: 0 16px 36px rgba(19, 33, 61, 0.2);
-}
 </style>
