@@ -343,6 +343,7 @@ const faqItems = computed<AccordionItem[]>(() => [
 .service-feature {
   display: flex;
   flex-direction: column;
+  padding: 1.75rem 1.25rem;
 }
 
 .service-feature__icon {
@@ -355,6 +356,22 @@ const faqItems = computed<AccordionItem[]>(() => [
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
+}
+
+.service-feature h3 {
+  font-size: clamp(1.15rem, 1.25vw, 1.3rem);
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.service-feature p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #4A5877);
+  margin: 0;
 }
 
 .steps-grid {
