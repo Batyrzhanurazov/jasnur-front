@@ -143,10 +143,10 @@ VITE_COLOR_SUCCESS=${neutrals.success}
 VITE_SITE_URL=${siteUrl}
 
 # ─── Связь ───
-# Плавающая кнопка «Написать» (WhatsApp с номера из презентации)
-VITE_CONTACT_URL=https://wa.me/77472818830
-# Плавающая кнопка «Видеозвонок». TODO: ссылка на приложение диспетчерской службы
-VITE_VIDEO_CALL_URL=https://wa.me/77472818830
+# Плавающая кнопка «Написать» (WhatsApp)
+VITE_CONTACT_URL=https://wa.me/77759711546
+# Плавающая кнопка «Видеозвонок»
+VITE_VIDEO_CALL_URL=https://wa.me/77759711546
 
 # ─── Мобильное приложение (TODO: ссылки отсутствуют в презентации) ───
 VITE_APP_STORE_URL=

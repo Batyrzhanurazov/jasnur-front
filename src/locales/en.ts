@@ -8,7 +8,7 @@ const en: MessageSchema = {
     city: 'Astana',
     foundedDate: 'August 08, 2008',
     callToAction: 'Contact Dispatcher',
-    phone: '+7 747 281 88 30',
+    phone: '+7 775 971 15 46',
     email: 'dispetcherskaya.astana{\'@\'}gmail.com',
     instagram: '{\'@\'}dispetcherskaya_sluzhba',
     readMore: 'Learn More',
@@ -183,7 +183,7 @@ const en: MessageSchema = {
     q2: 'What is the cost of interpretation services?',
     a2: 'Funding mechanisms and service fees are subsidized through municipal and state social programs (TODO: details pending). Emergency calls are always served free of charge.',
     q3: 'How do I register for the first time?',
-    a3: 'Send a message via WhatsApp to +7 747 281 88 30 or email dispetcherskaya.astana{\'@\'}gmail.com for prompt account onboarding.',
+    a3: 'Send a message via WhatsApp to +7 775 971 15 46 or email dispetcherskaya.astana{\'@\'}gmail.com for prompt account onboarding.',
     q4: 'What should I do during an emergency at night?',
     a4: 'Initiate a video call immediately or send a text message with your GPS location and emergency description: our operator will notify 112 / 102 / 103 rescue teams.'
   },

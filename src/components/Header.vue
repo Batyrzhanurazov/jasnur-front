@@ -40,7 +40,6 @@ function closeMenu() {
   isMenuOpen.value = false
 }
 
-const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/77472818830'
 </script>
 
 <template>
@@ -206,24 +205,6 @@ const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/7747281883
           </button>
         </div>
 
-        <!-- Emergency / Video Call button -->
-        <a
-          :href="contactUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-accent btn-sm header__cta"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            width="18"
-            height="18"
-            aria-hidden="true"
-          >
-            <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z" />
-          </svg>
-          <span class="header__cta-text">{{ $t('common.videoCallShort') }}</span>
-        </a>
 
         <!-- Mobile hamburger -->
         <button
@@ -359,25 +340,6 @@ const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/7747281883
               English
             </button>
           </div>
-
-          <a
-            :href="contactUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-accent btn-lg"
-            @click="closeMenu"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              width="20"
-              height="20"
-              aria-hidden="true"
-            >
-              <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z" />
-            </svg>
-            {{ $t('common.callToAction') }}
-          </a>
         </div>
       </div>
     </Transition>
@@ -577,21 +539,6 @@ const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/7747281883
   color: #FFFFFF;
 }
 
-.header__cta {
-  display: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding: 0.45rem 0.85rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-@media (min-width: 1360px) {
-  .header__cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-}
 
 .burger-btn {
   display: flex;

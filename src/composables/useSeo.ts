@@ -118,7 +118,7 @@ export function useSeo(options?: () => SeoOptions) {
       },
       'contactPoint': {
         '@type': 'ContactPoint',
-        'telephone': '+7-747-281-88-30',
+        'telephone': '+7-775-971-15-46',
         'contactType': 'Emergency video interpretation & dispatch',
         'email': 'dispetcherskaya.astana@gmail.com',
         'availableLanguage': ['Russian', 'Kazakh', 'Sign Language']

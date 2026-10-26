@@ -139,7 +139,7 @@ function switchLocale(newLocale: AppLocale) {
             <li>
               <span class="label">{{ $t('contacts.phoneLabel') }}:</span>
               <a
-                href="https://wa.me/77472818830"
+                href="https://wa.me/77759711546"
                 target="_blank"
                 rel="noopener"
               >{{ $t('common.phone') }}</a>

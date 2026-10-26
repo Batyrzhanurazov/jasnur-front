@@ -11,8 +11,8 @@ useSeo(() => ({
   description: t('dispatcher.subtitle')
 }))
 
-const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/77472818830'
-const videoCallUrl = import.meta.env.VITE_VIDEO_CALL_URL || 'https://wa.me/77472818830'
+const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/77759711546'
+const videoCallUrl = import.meta.env.VITE_VIDEO_CALL_URL || 'https://wa.me/77759711546'
 const appStoreUrl = import.meta.env.VITE_APP_STORE_URL || ''
 const googlePlayUrl = import.meta.env.VITE_GOOGLE_PLAY_URL || ''
 

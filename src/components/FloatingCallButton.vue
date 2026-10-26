@@ -3,8 +3,8 @@ import { ref } from 'vue'
 
 const isOpen = ref(false)
 
-const videoCallUrl = import.meta.env.VITE_VIDEO_CALL_URL || 'https://wa.me/77472818830'
-const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/77472818830'
+const videoCallUrl = import.meta.env.VITE_VIDEO_CALL_URL || 'https://wa.me/77759711546'
+const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/77759711546'
 
 function toggleMenu() {
   isOpen.value = !isOpen.value

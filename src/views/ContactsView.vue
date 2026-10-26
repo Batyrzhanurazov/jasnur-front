@@ -79,12 +79,12 @@ function submitFeedback() {
                   <div>
                     <span class="method-label">{{ $t('contacts.phoneLabel') }}</span>
                     <a
-                      href="https://wa.me/77472818830"
+                      href="https://wa.me/77759711546"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="method-value"
                     >
-                      +7 747 281 88 30
+                      +7 775 971 15 46
                     </a>
                   </div>
                 </li>

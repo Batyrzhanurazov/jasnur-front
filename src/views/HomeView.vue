@@ -19,7 +19,7 @@ useSeo(() => ({
   description: t('hero.subtitle')
 }))
 
-const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/77472818830'
+const contactUrl = import.meta.env.VITE_CONTACT_URL || 'https://wa.me/77759711546'
 
 const implementedProjects = computed(() => {
   const cur = currentLocale.value
