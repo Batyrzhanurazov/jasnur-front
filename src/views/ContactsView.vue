@@ -107,10 +107,10 @@ function submitFeedback() {
                   <div>
                     <span class="method-label">{{ $t('contacts.emailLabel') }}</span>
                     <a
-                      href="mailto:dispetcherskaya.astana@gmail.com"
+                      href="mailto:deafjasnur2021@gmail.com"
                       class="method-value"
                     >
-                      dispetcherskaya.astana@gmail.com
+                      deafjasnur2021@gmail.com
                     </a>
                   </div>
                 </li>
@@ -176,9 +176,8 @@ function submitFeedback() {
                     </svg>
                   </div>
                   <div>
-                    <span class="method-label">{{ $t('contacts.cityLabel') }}</span>
-                    <span class="method-value">{{ $t('contacts.cityValue') }}</span>
-                    <small class="todo-hint">{{ $t('contacts.addressValue') }}</small>
+                    <span class="method-label">{{ $t('contacts.addressLabel') }}</span>
+                    <span class="method-value">{{ $t('contacts.addressValue') }}</span>
                   </div>
                 </li>
               </ul>

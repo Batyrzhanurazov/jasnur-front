@@ -127,7 +127,7 @@ const implementedProjects = computed(() => {
             :label="$t('hero.statRegionsLabel')"
           />
           <StatCounter
-            value="08.08.2008"
+            :value="2008"
             :label="$t('hero.statYearsLabel')"
           />
         </div>

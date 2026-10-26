@@ -113,6 +113,7 @@ export function useSeo(options?: () => SeoOptions) {
       'foundingDate': '2008-08-08',
       'address': {
         '@type': 'PostalAddress',
+        'streetAddress': 'ул. Е-103, 7',
         'addressLocality': 'Astana',
         'addressCountry': 'KZ'
       },
@@ -120,7 +121,7 @@ export function useSeo(options?: () => SeoOptions) {
         '@type': 'ContactPoint',
         'telephone': '+7-775-971-15-46',
         'contactType': 'Emergency video interpretation & dispatch',
-        'email': 'dispetcherskaya.astana@gmail.com',
+        'email': 'deafjasnur2021@gmail.com',
         'availableLanguage': ['Russian', 'Kazakh', 'Sign Language']
       }
     })

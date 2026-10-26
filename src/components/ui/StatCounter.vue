@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 
 const props = defineProps<{
   value: number | string
@@ -8,7 +8,13 @@ const props = defineProps<{
   suffix?: string
 }>()
 
-const displayedValue = ref<number | string>(typeof props.value === 'number' ? 0 : props.value)
+const isLongValue = computed(() => String(props.value).length > 5)
+
+const displayedValue = ref<number | string>(
+  typeof props.value === 'number'
+    ? (props.value > 1000 ? props.value - 30 : 0)
+    : props.value
+)
 const rootEl = ref<HTMLElement | null>(null)
 let animated = false
 
@@ -17,14 +23,16 @@ function animateCount() {
   animated = true
 
   const target = props.value
-  const duration = 1600
+  const startVal = target > 1000 ? target - 30 : 0
+  const duration = 1400
   const start = performance.now()
 
   function step(now: number) {
     const elapsed = now - start
     const progress = Math.min(elapsed / duration, 1)
     // easeOutQuad
-    const current = Math.round(target * (progress * (2 - progress)))
+    const eased = progress * (2 - progress)
+    const current = Math.round(startVal + (target - startVal) * eased)
     displayedValue.value = current
 
     if (progress < 1) {
@@ -57,7 +65,10 @@ onMounted(() => {
     ref="rootEl"
     class="stat-counter"
   >
-    <div class="stat-counter__number">
+    <div
+      class="stat-counter__number"
+      :class="{ 'stat-counter__number--compact': isLongValue }"
+    >
       <span
         v-if="prefix"
         class="prefix"
@@ -87,6 +98,7 @@ onMounted(() => {
   box-shadow: 0 8px 24px rgba(19, 33, 61, 0.05);
   position: relative;
   overflow: hidden;
+  min-width: 0;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -108,12 +120,19 @@ onMounted(() => {
 .stat-counter__number {
   font-family: 'Montserrat Variable', sans-serif;
   font-weight: 800;
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
   color: var(--color-primary, #1B4F94);
   line-height: 1.1;
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 2px;
+  max-width: 100%;
+}
+
+.stat-counter__number--compact {
+  font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+  letter-spacing: -0.02em;
 }
 
 .suffix, .prefix {

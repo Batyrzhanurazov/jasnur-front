@@ -9,7 +9,7 @@ const en: MessageSchema = {
     foundedDate: 'August 08, 2008',
     callToAction: 'Contact Dispatcher',
     phone: '+7 775 971 15 46',
-    email: 'dispetcherskaya.astana{\'@\'}gmail.com',
+    email: 'deafjasnur2021{\'@\'}gmail.com',
     instagram: '{\'@\'}dispetcherskaya_sluzhba',
     readMore: 'Learn More',
     back: 'Back',
@@ -25,7 +25,7 @@ const en: MessageSchema = {
     watchVideo: 'Watch with Sign Interpretation',
     downloadApp: 'Download Application',
     todoNotice: 'Details pending confirmation (TODO)',
-    addressPlaceholder: 'Astana (exact address to be confirmed, TODO)',
+    addressPlaceholder: '7, E-103 st., Astana',
     all: 'All'
   },
   nav: {
@@ -183,7 +183,7 @@ const en: MessageSchema = {
     q2: 'What is the cost of interpretation services?',
     a2: 'Funding mechanisms and service fees are subsidized through municipal and state social programs (TODO: details pending). Emergency calls are always served free of charge.',
     q3: 'How do I register for the first time?',
-    a3: 'Send a message via WhatsApp to +7 775 971 15 46 or email dispetcherskaya.astana{\'@\'}gmail.com for prompt account onboarding.',
+    a3: 'Send a message via WhatsApp to +7 775 971 15 46 or email deafjasnur2021{\'@\'}gmail.com for prompt account onboarding.',
     q4: 'What should I do during an emergency at night?',
     a4: 'Initiate a video call immediately or send a text message with your GPS location and emergency description: our operator will notify 112 / 102 / 103 rescue teams.'
   },
@@ -268,8 +268,8 @@ const en: MessageSchema = {
     phoneLabel: 'Phone / WhatsApp',
     cityLabel: 'City',
     cityValue: 'Astana, Republic of Kazakhstan',
-    addressLabel: 'Physical Address',
-    addressValue: 'Astana (exact premises address to be confirmed, TODO)',
+    addressLabel: 'Address',
+    addressValue: '7, E-103 st., Astana',
     workHoursLabel: 'Dispatch Service Hours',
     workHoursValue: 'Round-the-clock (24/7) for emergency video calls',
     formTitle: 'Send Us a Message',

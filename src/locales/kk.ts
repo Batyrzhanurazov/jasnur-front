@@ -12,7 +12,7 @@ const kk: MessageSchema = {
     foundedDate: '2008 жылғы 08 тамыз',
     callToAction: 'Диспетчермен байланысу',
     phone: '+7 775 971 15 46',
-    email: 'dispetcherskaya.astana{\'@\'}gmail.com',
+    email: 'deafjasnur2021{\'@\'}gmail.com',
     instagram: '{\'@\'}dispetcherskaya_sluzhba',
     readMore: 'Толығырақ',
     back: 'Артқа',
@@ -28,7 +28,7 @@ const kk: MessageSchema = {
     watchVideo: 'Ым тіліндегі аудармамен көру',
     downloadApp: 'Қосымшаны жүктеу',
     todoNotice: 'Ақпарат нақтылануда (TODO)',
-    addressPlaceholder: 'Астана қ. (нақты мекенжайы нақтылануда, TODO)',
+    addressPlaceholder: 'Астана қ., Е-103 к-сі, 7',
     all: 'Барлығы'
   },
   nav: {
@@ -73,7 +73,7 @@ const kk: MessageSchema = {
     statRegions: '16',
     statRegionsLabel: 'Оқыту семинарларымен қамтылған өңірлер',
     statYears: '2008',
-    statYearsLabel: 'Бірлестіктің құрылған жылы (08.08.2008)'
+    statYearsLabel: 'Құрылған жылы (08.08.2008)'
   },
   home: {
     directionsTitle: 'Жобаның үш негізгі бағыты',
@@ -186,7 +186,7 @@ const kk: MessageSchema = {
     q2: 'Сурдоаударма қызметінің құны қандай?',
     a2: 'Қаржыландыру тәртібі мен тарифтер мемлекеттік және гранттық бағдарламалар аясында нақтылануда (TODO: нақтылануда). Төтенше көмек тез арада көрсетіледі.',
     q3: 'Қызметке алғаш рет қалай қосылуға болады?',
-    a3: '+7 775 971 15 46 WhatsApp нөміріне хабарлама жіберуге немесе dispetcherskaya.astana{\'@\'}gmail.com электрондық поштасына жазуға болады.',
+    a3: '+7 775 971 15 46 WhatsApp нөміріне хабарлама жіберуге немесе deafjasnur2021{\'@\'}gmail.com электрондық поштасына жазуға болады.',
     q4: 'Түнде төтенше жағдай туындаса не істеу керек?',
     a4: 'Дереу бейнебайланыс арқылы кезекші диспетчерге хабарласыңыз немесе геолокация мен оқиға сипаттамасы бар мәтіндік хабарлама жіберіңіз: оператор 112 / 102 / 103 қызметтерін шақырады.'
   },
@@ -271,8 +271,8 @@ const kk: MessageSchema = {
     phoneLabel: 'Телефон / WhatsApp',
     cityLabel: 'Қала',
     cityValue: 'Астана қ., Қазақстан Республикасы',
-    addressLabel: 'Нақты мекенжайы',
-    addressValue: 'Астана қ. (нақты мекенжайы нақтылануда, TODO)',
+    addressLabel: 'Мекенжайы',
+    addressValue: 'Астана қ., Е-103 к-сі, 7',
     workHoursLabel: 'Диспетчерліктің жұмыс кестесі',
     workHoursValue: 'Төтенше қоңыраулар үшін тәулік бойы (24/7)',
     formTitle: 'Кері байланыс формасы',

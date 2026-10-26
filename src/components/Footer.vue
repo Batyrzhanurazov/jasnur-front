@@ -146,7 +146,7 @@ function switchLocale(newLocale: AppLocale) {
             </li>
             <li>
               <span class="label">{{ $t('contacts.emailLabel') }}:</span>
-              <a href="mailto:dispetcherskaya.astana@gmail.com">{{ $t('common.email') }}</a>
+              <a href="mailto:deafjasnur2021@gmail.com">{{ $t('common.email') }}</a>
             </li>
             <li>
               <span class="label">{{ $t('contacts.instagramLabel') }}:</span>
@@ -157,8 +157,8 @@ function switchLocale(newLocale: AppLocale) {
               >{{ $t('common.instagram') }}</a>
             </li>
             <li>
-              <span class="label">{{ $t('contacts.cityLabel') }}:</span>
-              <span>{{ $t('contacts.cityValue') }}</span>
+              <span class="label">{{ $t('contacts.addressLabel') }}:</span>
+              <span>{{ $t('contacts.addressValue') }}</span>
             </li>
           </ul>
 
@@ -211,7 +211,7 @@ function switchLocale(newLocale: AppLocale) {
 
       <div class="footer__bottom">
         <p>{{ $t('footer.copyright') }}</p>
-        <p class="footer__address-todo">
+        <p class="footer__address">
           {{ $t('common.addressPlaceholder') }}
         </p>
       </div>
@@ -435,8 +435,7 @@ function switchLocale(newLocale: AppLocale) {
   color: var(--color-section-dark-muted, #B8CAE6);
 }
 
-.footer__address-todo {
-  font-style: italic;
-  font-size: 0.8rem;
+.footer__address {
+  font-size: 0.85rem;
 }
 </style>
