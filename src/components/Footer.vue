@@ -1,28 +1,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import type { AppLocale } from '@/locales/types'
 
 const route = useRoute()
-const router = useRouter()
 const { locale } = useI18n()
 
 const currentLocale = computed<AppLocale>(() => {
   return (route.params.locale as AppLocale) || (locale.value as AppLocale) || 'ru'
 })
-
-function switchLocale(newLocale: AppLocale) {
-  if (newLocale === currentLocale.value) return
-  locale.value = newLocale
-  try {
-    localStorage.setItem('zn_locale', newLocale)
-  } catch {
-    // ignore
-  }
-  const pathWithoutLocale = route.path.replace(/^\/(ru|kk|en)/, '')
-  router.push({ path: `/${newLocale}${pathWithoutLocale || ''}`, query: route.query, hash: route.hash })
-}
 </script>
 
 <template>
@@ -167,46 +154,6 @@ function switchLocale(newLocale: AppLocale) {
             <p>{{ $t('contacts.workHoursValue') }}</p>
           </div>
         </div>
-
-        <!-- Col 4: Language Switcher & Mission -->
-        <div class="footer__col">
-          <h3 class="footer__col-title">
-            {{ $t('a11y.theme') }} & {{ $t('nav.home') }}
-          </h3>
-          <div
-            class="lang-switch lang-switch--footer"
-            role="group"
-            aria-label="Language selection"
-          >
-            <button
-              type="button"
-              class="lang-btn"
-              :class="{ active: currentLocale === 'ru' }"
-              @click="switchLocale('ru')"
-            >
-              Русский
-            </button>
-            <button
-              type="button"
-              class="lang-btn"
-              :class="{ active: currentLocale === 'kk' }"
-              @click="switchLocale('kk')"
-            >
-              Қазақша
-            </button>
-            <button
-              type="button"
-              class="lang-btn"
-              :class="{ active: currentLocale === 'en' }"
-              @click="switchLocale('en')"
-            >
-              English
-            </button>
-          </div>
-          <p class="footer__footnote">
-            {{ $t('footer.madeWithCare') }}
-          </p>
-        </div>
       </div>
 
       <div class="footer__bottom">
@@ -248,7 +195,7 @@ function switchLocale(newLocale: AppLocale) {
 }
 @media (min-width: 900px) {
   .footer__grid {
-    grid-template-columns: 1.4fr 1fr 1.2fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1.3fr;
   }
 }
 
@@ -404,24 +351,7 @@ function switchLocale(newLocale: AppLocale) {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-.lang-switch--footer .lang-btn {
-  color: #FFFFFF;
-  text-align: left;
-  padding: 0.5rem 0.85rem;
-  font-size: 0.9rem;
-}
 
-.lang-switch--footer .lang-btn.active {
-  background: var(--color-secondary, #409CA8);
-  color: #FFFFFF;
-}
-
-.footer__footnote {
-  margin-top: 1.25rem;
-  font-size: 0.8rem;
-  color: var(--color-section-dark-muted, #B8CAE6);
-  line-height: 1.5;
-}
 
 .footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
